@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 
 with io.open("flask_appbuilder/__init__.py", "rt", encoding="utf8") as f:
-    version = re.search(r"__version__ = \'(.*?)\'", f.read()).group(1)
+    version = re.search(r"__version__ = \"(.*?)\"", f.read()).group(1)
 
 
 def fpath(name):
@@ -72,7 +72,10 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    python_requires="~=3.6",
     test_suite="nose.collector",
 )
